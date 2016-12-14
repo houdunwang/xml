@@ -24,7 +24,7 @@
   "autoload": {
     "files": [],
     "psr-4": {
-      "houdunwang\\xml": "src"
+      "houdunwang\\xml\\": "src"
     }
   }
 }
