@@ -1,4 +1,4 @@
-<?php namespace houdunwang\xml;
+<?php namespace houdunwang\xml\build;
 
 use DOMDocument;
 use Exception;
