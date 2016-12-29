@@ -9,9 +9,9 @@
  * '-------------------------------------------------------------------*/
 namespace houdunwang\xml;
 
-use hdphp\kernel\ServiceProvider;
+use houdunwang\framework\build\Provider;
 
-class XmlProvider extends ServiceProvider {
+class XmlProvider extends Provider {
 
 	//延迟加载
 	public $defer = true;

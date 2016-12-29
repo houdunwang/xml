@@ -9,9 +9,9 @@
  * '-------------------------------------------------------------------*/
 namespace houdunwang\xml;
 
-use hdphp\kernel\ServiceFacade;
+use houdunwang\framework\build\Facade;
 
-class XmlFacade extends ServiceFacade {
+class XmlFacade extends Facade {
 	public static function getFacadeAccessor() {
 		return 'Xml';
 	}
