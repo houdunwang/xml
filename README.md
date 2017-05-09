@@ -1,13 +1,24 @@
 #XML处理
-###介绍
-在 web 开发中经常大量用到 XML这种快速简便的数据传输格式,本组件可用于创建与解析XML。
+
+在 web 开发中经常大量用到 XML这种快速简便的数据传输格式, 本组件可用于创建与解析XML数据。
+
+其他产品也可以使用该组件，请登录 [GITHUB](https://github.com/houdunwang/xml) 查看源代码与说明文档。
+
 [TOC]
 
-#复杂的XML操作
-###生成XML
+#开始使用
+
+##安装
+使用 composer 命令进行安装或下载源代码使用。
 
 ```
-$obj = new \houdunwang\xml\Xml();
+composer require houdunwang/xml
+```
+> HDPHP 框架已经内置此组件，不需要安装
+
+##复杂的XML操作
+####生成XML
+```
 $data = array(
 	'@attributes' => array(
 		'type' => 'fiction'
@@ -29,7 +40,7 @@ $data = array(
 	)
 );
 header( 'Content-Type: application/xml' );
-$xml = $obj->toXml('root_node', $data);
+$xml = Xml::toXml('root_node', $data);
 echo $xml;
 ```
 
@@ -48,10 +59,9 @@ echo $xml;
 </root_node>
 ```
 
-###解析XML
+####解析XML
 xml文件 hd.xml：
 ```
-$obj = new \houdunwang\xml\Xml();
 $xml=<<<str
 <?xml version="1.0" encoding="UTF-8"?>
 <root_node type="fiction">
@@ -64,23 +74,20 @@ $xml=<<<str
 	</book>
 </root_node>
 str;
-$result = $obj->toArray($xml);
-print_r($result);
+$result = Xml::toArray($xml);
 ```
 
-#简单的XML操作
+##简单的XML操作
 
-###生成xml字符
+####生成xml字符
 不能分析复杂的XML数据比如有属性的XML
 ```
 $xml=['name'=>'houdunwang','url'=>'houdunwang.com'];
-$obj = new \houdunwang\xml\Xml();
-$obj->toSimpleXml($xml);
+Xml::toSimpleXml($xml);
 ```
 
-###解析XML
+####解析XML
 将xml转为array,不分析XML属性等数据
 ```
-$obj = new \houdunwang\xml\Xml();
-$obj->toSimpleArray($xml);
+Xml::toSimpleArray($xml);
 ```
