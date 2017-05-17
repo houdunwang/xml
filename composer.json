@@ -1,7 +1,6 @@
 {
   "name": "houdunwang/xml",
   "description": "XML数据生成与解析组件",
-  "type": "project",
   "keywords": [
     "houdunwang",
     "hdphp",
