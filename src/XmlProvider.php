@@ -23,11 +23,8 @@ class XmlProvider extends Provider
 
     public function register()
     {
-        $this->app->single(
-            'Xml',
-            function () {
-                return new Xml();
-            }
-        );
+        $this->app->single('Xml', function () {
+            return new Xml();
+        });
     }
 }
